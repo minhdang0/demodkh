@@ -51,10 +51,8 @@ $(document).ready(function() {
     });
 });
         
-    }
 
-  
-    $(".submit-button").on("click", function() {
+  $(".submit-button").on("click", function() {
         var username = $("#username").val();
         var password = $("#password").val();
 
@@ -64,4 +62,4 @@ $(document).ready(function() {
             alert("Đăng nhập thất bại. Vui lòng kiểm tra thông tin tài khoản của bạn.");
         }
     });
-});
+
