@@ -35,19 +35,7 @@ $(document).ready(function() {
         return /^[A-Za-z0-9]{6}$/.test(username);
     }
     function checkPassword(password) {
-        var reg = /^[A-Za-z0-9]{7}$/;
-        if ($("#txtPass").val() == "") {
-            $("#tbPass").html("*Bắt buộc nhập mật khẩu");
-            return false;
-        }
-        if (reg.test($("#txtPass").val())) {
-            $("#tbPass").html("");
-            return true;
-        }
-
-        $("#tbPass").html("Mật khẩu gồm 6 ký tự chữ hoặc số");
-        return false;
-        
+        return /^[A-Za-z0-9]{7}$/.test(password);   
     }
 
   
