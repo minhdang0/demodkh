@@ -34,8 +34,6 @@ $(document).ready(function() {
     function checkUsername(username) {
         return /^[A-Za-z0-9]{6}$/.test(username);
     }
-
-    
     function checkPassword(password) {
         var reg = /^[A-Za-z0-9]{7}$/;
         if ($("#txtPass").val() == "") {
@@ -49,6 +47,21 @@ $(document).ready(function() {
 
         $("#tbPass").html("Mật khẩu gồm 6 ký tự chữ hoặc số");
         return false;
+        
+    }
+
+  
+    $(".submit-button").on("click", function() {
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        if (accounts[username] === password && checkUsername(username) && checkPassword(password)) {
+            window.location.href = "admin.html"; 
+        } else {
+            alert("Đăng nhập thất bại. Vui lòng kiểm tra thông tin tài khoản của bạn.");
+        }
+    });
+});
         
     }
 
